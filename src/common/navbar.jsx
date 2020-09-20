@@ -12,7 +12,7 @@ class NavBar extends Component {
  render() {
   return(
    <>
-   <Navbar collapseOnSelect  expand='md' bg="dark" variant="light">
+   <Navbar sticky="top" collapseOnSelect  expand='md' bg="dark" variant="light">
         <NavbarBrand>
             <h3>
                 <span>Nibodh</span>-Electrical

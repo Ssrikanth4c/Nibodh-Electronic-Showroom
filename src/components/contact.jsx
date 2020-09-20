@@ -7,9 +7,25 @@ import MapAddress from './Map';
 **/
 
 class Contact extends Component {
- state = {
-     Api_KEY:'AIzaSyDKV9J3jYSHRdmAZKhMI8-n0EU2eukT62c'
+    constructor(props){
+        super(props)
+        this.state = {
+            fname:'',
+            lname:'',
+            email:'',
+            phoneNo:''
+        }
+    }
+ handelChange=e=>{
+   this.setState(
+       {[e.target.name]: e.target.value}
+   )
  }
+ handleSubmit=e=>{
+     e.preventDefault();
+     console.log(this.state)    
+ }
+ 
  render() {
   return(
       <>
@@ -18,21 +34,21 @@ class Contact extends Component {
                <div className="col-xl-6">
                    <h2>Contact us</h2>
                    <div className="contactBox">
-                       <Form className='formContainer m-0'>
+                       <Form  className='formContainer m-0' onSubmit={this.handleSubmit}>
                            <Row>
-                               <FormControl className='border-0 h3 font-weight-bold text-uppercase' placeholder='First Name' required type='text' size='md' />
+                               <FormControl name='fname' onChange={this.handelChange} className='border-0 h3 font-weight-bold text-uppercase' placeholder='First Name' required type='text' size='md' />
                             </Row>
                             <br/>
                             <Row>
-                               <FormControl className='border-0 h3 font-weight-bold text-uppercase' placeholder='Last Name' required type='text' size='md' />
+                               <FormControl name='lname' onChange={this.handelChange} className='border-0 h3 font-weight-bold text-uppercase' placeholder='Last Name' required type='text' size='md' />
                             </Row>
                             <br/>
                             <Row>
-                               <FormControl className='border-0 h3 font-weight-bold' placeholder='Email-id' required type='email' size='md' />
+                               <FormControl name='email' onChange={this.handelChange} className='border-0 h3 font-weight-bold' placeholder='Email-id' required type='email' size='md' />
                             </Row>
                             <br/>
                             <Row>
-                               <FormControl className='border-0 h3 font-weight-bold' placeholder='Phone Number' required type='tel' size='md' />
+                               <FormControl name='phonNo'  minLength={10} maxLength={10} onChange={this.handelChange}   className='border-0 h3 font-weight-bold' placeholder='Phone Number' required type='tel' size='md' />
                             </Row>
                             <br/>
                             <Button className='font-weight-bold' type='submit'block active variant='danger' size="lg">Submit</Button>

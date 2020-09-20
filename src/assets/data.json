@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "img": "https://electrical-showroom.co.uk/media/catalog/product/cache/6ff941c1f322468d1e9c9dc1807bdb6e/n/e/nest_indoor_camera_twin_pack_nc1200gb.jpg",
+        "name":"webCam",
+        "price": 200
+    },
+    {
+        "id":2,
+        "img": "https://electrical-showroom.co.uk/media/catalog/product/cache/6ff941c1f322468d1e9c9dc1807bdb6e/b/w/bw1001_4_1.jpg",
+        "name":"Electrical Hot Water",
+        "price": 150
+    },  
+    {
+        "id":3,
+        "img": "https://electrical-showroom.co.uk/media/catalog/product/cache/6ff941c1f322468d1e9c9dc1807bdb6e/d/o/doorbell_3_plus.png",
+        "name":"Smart Video Door",
+        "price": 100
+    },  
+    {
+        "id":4,
+        "img": "https://electrical-showroom.co.uk/media/catalog/product/cache/6ff941c1f322468d1e9c9dc1807bdb6e/t/3/t3029ex-ga00781-gb.png",
+        "name":"Google nest",
+        "price": 350
+    }    
+]
